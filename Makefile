@@ -1,15 +1,16 @@
-.PHONY: all build memcheck doc clean
+.PHONY: all build doc clean
 
-all: clean build memcheck doc
+all: clean build doc
 
 build:
 	g++ -g main.cpp
 
-memcheck: clean_mem
+memcheck:
 	valgrind --tool=massif --detailed-freq=1 --time-unit=B --massif-out-file=massif.log ./a.out
 	ms_print massif.log
 
 doc:
+	doxygen
 	sphinx-build -b html doc/sphinx/source doc/sphinx/build
 
 clean:
