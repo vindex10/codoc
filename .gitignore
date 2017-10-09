@@ -1,0 +1,10 @@
+doc/doxygen
+doc/sphinx/build
+__pycache__
+*.pyc
+*.pyo
+*.out
+*.log
+
+.env
+/activate
