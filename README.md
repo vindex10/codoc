@@ -20,8 +20,6 @@ Prepare environment
         pip install Sphinx breathe
     ```
 
-\* For testing memory allocation, install also Valgrind
-
 Run
 ---
 
@@ -32,7 +30,3 @@ To compile project and build docs:
 
 Then, open `docs/sphinx/build/index.html` in your browser to see built tutorial.
 
-To memcheck:
-```
-    make memcheck
-```
